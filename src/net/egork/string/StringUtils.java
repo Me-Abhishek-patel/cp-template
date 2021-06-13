@@ -228,4 +228,12 @@ public class StringUtils {
         }
         return d2;
     }
+
+    public static int[] freqArray(String s) {
+        int[] freq = new int[26];
+        for (char c : s.toCharArray()) {
+            freq[c - 'a']++;
+        }
+        return freq;
+    }
 }

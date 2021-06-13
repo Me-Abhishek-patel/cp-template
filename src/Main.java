@@ -1,6 +1,5 @@
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.util.Collections;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
@@ -9,40 +8,31 @@ import java.util.Scanner;
  *
  * @author Abhishek Patel
  */
-public class Main {
+class Main {
     public static void main(String[] args) {
-        InputStream inputStream = System.in;
-        OutputStream outputStream = System.out;
-        Scanner in = new Scanner(inputStream);
-        PrintWriter out = new PrintWriter(outputStream);
-        HowIMetYourMother solver = new HowIMetYourMother();
-        int testCount = Integer.parseInt(in.next());
-        for (int i = 1; i <= testCount; i++)
-            solver.solve(i, in, out);
-        out.close();
-    }
+        Scanner in = new Scanner(System.in);
+        int tc = in.nextInt();
+        while ((tc-- > 0)) {
+            int n = in.nextInt(), k = in.nextInt();
+            PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+            for (int i = 0; i < n; i++) {
+                pq.add(in.nextInt());
+            }
 
-    static class HowIMetYourMother {
-        public void solve(int testNumber, Scanner in, PrintWriter out) {
-            int x1 = in.nextInt();
-            int x2 = in.nextInt();
-            int x3 = in.nextInt();
-            int r = in.nextInt();
-            int x = Math.min(x1, x2);
-            int y = Math.max(x1, x2);
-            long lrx = Math.min(x3 + r, x3 - r);
-            long lry = Math.max(x3 + r, x3 - r);
-            long dif = Math.abs(x1 - x2);
-            if (x > lry) out.println(dif);
-            else if (y < lrx) out.println(dif);
-            else if (x >= lrx && y <= lry) out.println(0);
-            else if (x < lrx && y <= lry) out.println(lrx - x);
-            else if (x <= lry && y > lry) out.println(y - lry);
-            else out.println(dif - (Math.abs(lry - lrx)));
-
-
+            long sum = 0;
+            long prev = Long.MAX_VALUE;
+            while (!pq.isEmpty()) {
+                long t = pq.poll();
+                if (t != prev) {
+                    k--;
+                    prev = t;
+                }
+                if (t > 0 && k >= 0) {
+                    sum += t;
+                }
+            }
+            System.out.println(sum);
         }
-
     }
 }
 
