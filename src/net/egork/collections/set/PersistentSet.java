@@ -3,7 +3,8 @@ package net.egork.collections.set;
 import java.util.NavigableSet;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public interface PersistentSet<K> extends NavigableSet<K> {
     void markState(Object marker);

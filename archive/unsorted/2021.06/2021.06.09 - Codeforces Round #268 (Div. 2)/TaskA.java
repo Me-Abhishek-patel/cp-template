@@ -1,5 +1,9 @@
 package codes;
 
+
+
+
+import net.egork.geometry.Point;
 import net.egork.io.InputReader;
 import net.egork.io.OutputWriter;
 
@@ -20,5 +24,7 @@ public class TaskA {
         }
         if(arr[0]) out.printLine("Oh, my keyboard!");
         else out.printLine("I become the guy.");
+        Point a = new Point(1,2),b = new Point(3,4);
+
     }
 }

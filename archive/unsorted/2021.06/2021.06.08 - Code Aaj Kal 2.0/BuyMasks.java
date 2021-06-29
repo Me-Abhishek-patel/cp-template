@@ -20,6 +20,7 @@ public class BuyMasks {
                 return (o1.second / o1.first) > (o2.second / o2.first) ? (o1.second / o1.first) == (o2.second / o2.first) ? o1.compareTo(o2) : 1 : -1;
             }
         });
+
         long sum = (n/pack[0].first)*pack[0].second;
         n%=pack[0].first;
         sum += (n/pack[1].first)*pack[1].second;

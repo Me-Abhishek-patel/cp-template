@@ -7,7 +7,8 @@ import net.egork.graph.Graph;
 import java.util.Arrays;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class SubstringAutomaton {
     public int[][] edges;

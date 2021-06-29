@@ -5,7 +5,8 @@ import java.util.Arrays;
 import static java.lang.Math.min;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class StringUtils {
     public static String reverse(String sample) {
@@ -235,5 +236,12 @@ public class StringUtils {
             freq[c - 'a']++;
         }
         return freq;
+    }
+
+    public static boolean isPalindrome(String str) {
+        for (int i = 0, j = str.length() - 1; i < j; i++, j--) {
+            if (str.charAt(i) != str.charAt(j)) return false;
+        }
+        return true;
     }
 }

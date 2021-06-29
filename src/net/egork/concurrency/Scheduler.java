@@ -6,7 +6,8 @@ import net.egork.io.OutputWriter;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Scheduler {
     private final AtomicInteger testsRemaining;

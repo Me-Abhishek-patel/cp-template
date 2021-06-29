@@ -6,7 +6,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class MultiSet<K> implements Iterable<K> {
     private final Map<K, Integer> map;

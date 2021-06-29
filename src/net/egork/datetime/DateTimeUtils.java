@@ -1,7 +1,8 @@
 package net.egork.datetime;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class DateTimeUtils {
     public static Time timePassed(Time from, Time to) {

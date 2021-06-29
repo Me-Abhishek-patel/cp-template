@@ -1,7 +1,8 @@
 package net.egork.geometry;
 
 /**
- * @author egorku@yandex-team.ru
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Ray {
     public final Point base;

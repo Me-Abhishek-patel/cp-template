@@ -7,7 +7,8 @@ import static java.lang.Math.max;
 import static java.util.Arrays.copyOf;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class LongInteger implements Cloneable, Comparable<LongInteger> {
     public static final LongInteger ZERO = new LongInteger("0");

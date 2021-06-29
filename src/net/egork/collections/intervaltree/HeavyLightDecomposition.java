@@ -5,7 +5,7 @@ package net.egork.collections.intervaltree;//package net.egork.collections.inter
 //import java.util.List;
 //
 ///**
-// * @author Egor Kulikov (egorku@yandex-team.ru)
+// * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
 // */
 //public abstract class HeavyLightDecomposition {
 //    private final int[][] graph;

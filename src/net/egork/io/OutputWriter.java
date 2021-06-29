@@ -6,7 +6,8 @@ import java.io.*;
 import java.util.List;
 
 /**
- * @author Egor Kulikov (egor@egork.net)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class OutputWriter {
     private final PrintWriter writer;

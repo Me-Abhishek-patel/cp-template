@@ -3,7 +3,8 @@ package net.egork.numbers;
 import java.util.Arrays;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class PrimeFastFourierTransform {
     private final long MOD;

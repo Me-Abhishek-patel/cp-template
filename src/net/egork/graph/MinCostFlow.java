@@ -8,7 +8,7 @@ import net.egork.numbers.IntegerUtils;
 import java.util.Arrays;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public class MinCostFlow {
     private final Graph graph;

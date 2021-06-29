@@ -1,7 +1,8 @@
 package net.egork.string;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Trie {
     public final Node root = new Node();

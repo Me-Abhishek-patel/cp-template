@@ -6,7 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Polygon {
     public final Point[] vertices;

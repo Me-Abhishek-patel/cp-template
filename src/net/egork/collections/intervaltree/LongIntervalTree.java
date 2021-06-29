@@ -1,7 +1,7 @@
 package net.egork.collections.intervaltree;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public abstract class LongIntervalTree extends IntervalTree {
     protected long[] value;

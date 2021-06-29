@@ -7,7 +7,7 @@ import java.util.Arrays;
 import static net.egork.misc.ArrayUtils.createArray;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public class StronglyConnectedComponents {
     private final Graph graph;

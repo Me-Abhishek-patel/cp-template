@@ -5,7 +5,8 @@ import net.egork.numbers.IntegerUtils;
 import java.util.Random;
 
 /**
- * @author Egor Kulikov (egor@egork.net)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public abstract class AbstractStringHash implements StringHash {
     public static final long MULTIPLIER;

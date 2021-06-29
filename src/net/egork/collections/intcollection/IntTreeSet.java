@@ -10,7 +10,8 @@ import net.egork.generated.collections.set.IntSet;
 import java.util.Random;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class IntTreeSet extends IntAbstractStream implements IntSet {
     private final IntList value = new IntArrayList();

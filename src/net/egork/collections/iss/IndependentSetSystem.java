@@ -1,7 +1,8 @@
 package net.egork.collections.iss;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public interface IndependentSetSystem {
     boolean join(int first, int second);

@@ -1,7 +1,8 @@
 package net.egork.string;
 
 /**
- * @author Egor Kulikov (egor@egork.net)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class CompositeStringHash extends AbstractStringHash {
     private static long[] firstPower = new long[0];

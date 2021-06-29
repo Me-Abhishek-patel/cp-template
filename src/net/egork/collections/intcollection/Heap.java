@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public class Heap implements IntQueue {
     private final int[] at;

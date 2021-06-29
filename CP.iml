@@ -43,5 +43,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="CHelper" level="project" />
   </component>
 </module>

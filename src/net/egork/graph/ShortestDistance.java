@@ -10,7 +10,8 @@ import net.egork.numbers.IntegerUtils;
 import java.util.Arrays;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class ShortestDistance {
     public static Pair<long[], int[]> dijkstraAlgorithm(Graph graph, int source) {

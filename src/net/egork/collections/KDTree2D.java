@@ -4,7 +4,8 @@ import net.egork.generated.collections.comparator.IntComparator;
 import net.egork.misc.ArrayUtils;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class KDTree2D {
     private final int[] weight;

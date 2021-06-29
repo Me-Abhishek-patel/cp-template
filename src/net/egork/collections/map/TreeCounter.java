@@ -3,7 +3,8 @@ package net.egork.collections.map;
 import java.util.TreeMap;
 
 /**
- * @author Egor Kulikov (egor@egork.net)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class TreeCounter<K> extends TreeMap<K, Long> {
     public TreeCounter() {

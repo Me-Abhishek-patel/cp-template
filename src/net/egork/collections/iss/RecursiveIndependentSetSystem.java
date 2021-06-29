@@ -3,7 +3,8 @@ package net.egork.collections.iss;
 import static java.util.Arrays.fill;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class RecursiveIndependentSetSystem implements IndependentSetSystem {
     private final int[] color;

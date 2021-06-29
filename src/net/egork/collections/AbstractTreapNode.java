@@ -3,7 +3,8 @@ package net.egork.collections;
 import java.util.Random;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public abstract class AbstractTreapNode<T extends AbstractTreapNode> {
     private final static Random RANDOM = new Random(239);

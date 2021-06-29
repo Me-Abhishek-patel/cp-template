@@ -1,7 +1,7 @@
 package net.egork.numbers;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public class FastFourierTransform {
     public static void fft(double[] a, double[] b, boolean invert) {

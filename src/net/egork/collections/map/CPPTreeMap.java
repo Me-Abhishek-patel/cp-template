@@ -5,7 +5,8 @@ import net.egork.misc.Factory;
 import java.util.TreeMap;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class CPPTreeMap<K, V> extends TreeMap<K, V> {
     private final Factory<V> defaultValueFactory;

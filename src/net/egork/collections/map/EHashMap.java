@@ -3,7 +3,8 @@ package net.egork.collections.map;
 import java.util.*;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class EHashMap<E, V> extends AbstractMap<E, V> {
     private static final int[] shifts = new int[10];

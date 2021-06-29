@@ -9,7 +9,8 @@ import net.egork.misc.ArrayUtils;
 import net.egork.numbers.IntegerUtils;
 
 /**
- * @author egorku@yandex-team.ru
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class MinimalSpanningTree {
     public static IntSet minimalTree(final BidirectionalGraph graph) {

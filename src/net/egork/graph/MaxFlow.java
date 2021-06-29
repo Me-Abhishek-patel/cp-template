@@ -6,7 +6,7 @@ import net.egork.generated.collections.queue.IntQueue;
 import java.util.Arrays;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public class MaxFlow {
     private final Graph graph;

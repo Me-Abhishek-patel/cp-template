@@ -3,7 +3,8 @@ package net.egork.collections.map;
 import net.egork.misc.Factory;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class CPPMap<K, V> extends EHashMap<K, V> {
     private final Factory<V> defaultValueFactory;

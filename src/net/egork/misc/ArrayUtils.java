@@ -12,7 +12,8 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class ArrayUtils {
     public static void fill(short[][] array, short value) {
@@ -654,4 +655,23 @@ public class ArrayUtils {
         System.arraycopy(arr2, 0, result, arr1.length, arr2.length);
         return result;
     }
+
+    public static int[] prefixSumArray(int[] arr) {
+        int[] result = new int[arr.length];
+        result[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            result[i] = result[i - 1] + arr[i];
+        }
+        return result;
+    }
+
+    public static long[] prefixSumArray(long[] arr) {
+        long[] result = new long[arr.length];
+        result[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            result[i] = result[i - 1] + arr[i];
+        }
+        return result;
+    }
+
 }

@@ -1,7 +1,8 @@
 package net.egork.numbers;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Interpolation {
     private final long[] values;

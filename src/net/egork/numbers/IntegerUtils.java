@@ -12,7 +12,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class IntegerUtils {
     private static long _x;
@@ -501,5 +502,13 @@ public class IntegerUtils {
             size++;
         }
         return generatePowers(base, size, Long.MAX_VALUE);
+    }
+
+    public static boolean isRangeOverlap(long x1, long x2, long y1, long y2) {
+        return x1 <= y2 && y1 <= x2;
+    }
+
+    public static boolean isRangeOverlap(int x1, int x2, int y1, int y2) {
+        return x1 <= y2 && y1 <= x2;
     }
 }

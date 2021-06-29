@@ -5,7 +5,8 @@ import net.egork.generated.collections.list.IntArrayList;
 import net.egork.generated.collections.list.IntList;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class ListIndependentSetSystem implements IndependentSetSystem {
     private final IntList[] lists;

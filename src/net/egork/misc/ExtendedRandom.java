@@ -3,7 +3,8 @@ package net.egork.misc;
 import java.util.Random;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class ExtendedRandom extends Random {
     public ExtendedRandom(long seed) {

@@ -4,7 +4,8 @@ import static net.egork.numbers.IntegerUtils.generateFactorial;
 import static net.egork.numbers.IntegerUtils.generateReverseFactorials;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Combinations {
     private final long mod;

@@ -4,6 +4,9 @@ import %InputClassFQN%;
 import %OutputClassFQN%;
 
 public class %TaskClass% {
+    //---------------------------------------------Main-----------------------------------------------//
     public void solve(int testNumber, %InputClass% in, %OutputClass% out) {
+
     }
+
 }

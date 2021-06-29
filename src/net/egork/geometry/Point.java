@@ -3,7 +3,8 @@ package net.egork.geometry;
 import net.egork.io.InputReader;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Point {
     public static final Point ORIGIN = new Point(0, 0);

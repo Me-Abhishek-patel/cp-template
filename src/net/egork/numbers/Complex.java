@@ -1,5 +1,10 @@
 package net.egork.numbers;
 
+/**
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
+ */
+
 public class Complex {
     double x;
     double y;

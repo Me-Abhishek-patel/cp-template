@@ -1,7 +1,8 @@
 package net.egork.collections.intervaltree;
 
 /**
- * @author egorku@yandex-team.ru
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public abstract class IntervalTree {
     protected int size;

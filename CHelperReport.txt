@@ -1,2 +1,2 @@
-39 src/codes/A - Chewbasca and Number.json
+41 src/codes/B - Mahmoud and a Triangle.json
 0

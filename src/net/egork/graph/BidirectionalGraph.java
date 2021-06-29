@@ -1,7 +1,7 @@
 package net.egork.graph;
 
 /**
- * @author Egor Kulikov (egorku@yandex-team.ru)
+ * @author Egor Kulikov (Abhishek Patel (abhishekpatelmrj@gmail.com))
  */
 public class BidirectionalGraph extends Graph {
     public int[] transposedEdge;

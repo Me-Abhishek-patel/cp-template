@@ -1,7 +1,8 @@
 package net.egork.collections;
 
 /**
- * @author Egor Kulikov (kulikov@devexperts.com)
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Pair<U, V> implements Comparable<Pair<U, V>> {
     public final U first;

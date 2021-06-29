@@ -8,7 +8,8 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class IntSplaySet implements IntSet {
     private final IntComparator comparator;

@@ -1,7 +1,8 @@
 package net.egork.geometry;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Quaternion {
     public static final Quaternion EX = new Quaternion(1, 0, 0);

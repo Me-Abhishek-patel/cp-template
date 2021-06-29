@@ -4,7 +4,8 @@ import net.egork.generated.collections.list.IntArray;
 import net.egork.generated.collections.list.IntList;
 
 /**
- * @author egor@egork.net
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Range {
     public static IntList range(int from, int to) {
