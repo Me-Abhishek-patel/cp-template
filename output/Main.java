@@ -1,9 +1,9 @@
 import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashSet;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.io.BufferedWriter;
 import java.io.Writer;
 import java.io.OutputStreamWriter;
@@ -30,50 +30,22 @@ public class Main {
 
     static class TaskB {
         public void solve(int testNumber, InputReader in, OutputWriter out) {
-            int n = in.readInt();
-            int[] arr = in.readIntArray(n);
-            Arrays.sort(arr);
-
-
-            for (int i = 1; i < n - 1; i++) {
-                if (arr[i - 1] + arr[i] > arr[i + 1]) {
-                    out.printLine("YES");
+            int n = in.readInt(), m = in.readInt();
+            char[][] rect = in.readTable(n, m);
+            HashSet<Integer> hs = new HashSet<>();
+            for (int i = 0; i < n; i++) {
+                int g = 0, s = 0;
+                for (int j = 0; j < m; j++) {
+                    if (rect[i][j] == 'G') g = j;
+                    if (rect[i][j] == 'S') s = j;
+                }
+                if (g < s) hs.add(s - g);
+                else if (s < g) {
+                    out.printLine("-1");
                     return;
                 }
             }
-
-            out.printLine("NO");
-        }
-
-    }
-
-    static class OutputWriter {
-        private final PrintWriter writer;
-
-        public OutputWriter(OutputStream outputStream) {
-            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
-        }
-
-        public OutputWriter(Writer writer) {
-            this.writer = new PrintWriter(writer);
-        }
-
-        public void print(Object... objects) {
-            for (int i = 0; i < objects.length; i++) {
-                if (i != 0) {
-                    writer.print(' ');
-                }
-                writer.print(objects[i]);
-            }
-        }
-
-        public void printLine(Object... objects) {
-            print(objects);
-            writer.println();
-        }
-
-        public void close() {
-            writer.close();
+            out.printLine(hs.size());
         }
 
     }
@@ -93,12 +65,20 @@ public class Main {
             return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
         }
 
-        public int[] readIntArray(int size) {
-            int[] array = new int[size];
+        public char[] readCharArray(int size) {
+            char[] array = new char[size];
             for (int i = 0; i < size; i++) {
-                array[i] = readInt();
+                array[i] = readCharacter();
             }
             return array;
+        }
+
+        public char[][] readTable(int rowCount, int columnCount) {
+            char[][] table = new char[rowCount][];
+            for (int i = 0; i < rowCount; i++) {
+                table[i] = this.readCharArray(columnCount);
+            }
+            return table;
         }
 
         public int read() {
@@ -148,9 +128,52 @@ public class Main {
             return isWhitespace(c);
         }
 
+        public char readCharacter() {
+            int c = read();
+            while (isSpaceChar(c)) {
+                c = read();
+            }
+            return (char) c;
+        }
+
         public interface SpaceCharFilter {
             boolean isSpaceChar(int ch);
 
+        }
+
+    }
+
+    static class OutputWriter {
+        private final PrintWriter writer;
+
+        public OutputWriter(OutputStream outputStream) {
+            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
+        }
+
+        public OutputWriter(Writer writer) {
+            this.writer = new PrintWriter(writer);
+        }
+
+        public void print(Object... objects) {
+            for (int i = 0; i < objects.length; i++) {
+                if (i != 0) {
+                    writer.print(' ');
+                }
+                writer.print(objects[i]);
+            }
+        }
+
+        public void printLine(Object... objects) {
+            print(objects);
+            writer.println();
+        }
+
+        public void close() {
+            writer.close();
+        }
+
+        public void printLine(int i) {
+            writer.println(i);
         }
 
     }

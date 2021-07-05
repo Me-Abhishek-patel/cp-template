@@ -1,18 +1,15 @@
-
-
 class Solution {
-    public void rotate(int[] nums, int k) {
-        k %= nums.length;
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, nums.length - 1);
-        reverse(nums, 0, nums.length - 1);
-    }
-
-    private void reverse(int[] nums, int i, int j) {
-        while (i < j) {
-            int temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
+    public int[] findErrorNums(int[] nums) {
+        int[] ans = new int[]{0, 0};
+        int[] freq = new int[nums.length];
+        int xor = 0;
+        for (int i = 0; i < nums.length; i++) {
+            freq[nums[i] - 1]++;
+            xor ^= (xor ^= (i + 1));
+            if (freq[nums[i] - 1] > 1) ans[0] = nums[i];
         }
+        ans[1] = xor ^ ans[0];
+        return ans;
+
     }
 }

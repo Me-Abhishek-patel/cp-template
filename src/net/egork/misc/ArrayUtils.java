@@ -10,6 +10,7 @@ import net.egork.generated.collections.list.LongArray;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
@@ -672,6 +673,20 @@ public class ArrayUtils {
             result[i] = result[i - 1] + arr[i];
         }
         return result;
+    }
+
+    public static void shuffle(int[] a) {
+        for (int i = 1; i < a.length; i++) {
+            int x = new Random(31).nextInt(i + 1);
+            int t = a[i];
+            a[i] = a[x];
+            a[x] = t;
+        }
+    }
+
+    public static void shuffleAndSort(int[] a) {
+        shuffle(a);
+        Arrays.sort(a);
     }
 
 }
