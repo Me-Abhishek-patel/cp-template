@@ -26,6 +26,41 @@
       <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
       <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
       <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-core-2.12.0.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-core-2.12.0.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-core-2.12.0.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-core-2.12.0.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-core-2.12.0.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-databind.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/jackson-core-2.12.0.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

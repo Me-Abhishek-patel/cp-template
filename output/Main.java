@@ -1,9 +1,9 @@
 import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashSet;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.io.BufferedWriter;
 import java.io.Writer;
 import java.io.OutputStreamWriter;
@@ -23,29 +23,49 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         OutputWriter out = new OutputWriter(outputStream);
-        TaskB solver = new TaskB();
+        TaskA solver = new TaskA();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskB {
+    static class TaskA {
         public void solve(int testNumber, InputReader in, OutputWriter out) {
-            int n = in.readInt(), m = in.readInt();
-            char[][] rect = in.readTable(n, m);
-            HashSet<Integer> hs = new HashSet<>();
+            int n = in.readInt(), d = in.readInt();
+            String s = in.readLine();
+            int[] dp = new int[n];
+            Arrays.fill(dp, 10000);
+            dp[0] = 0;
             for (int i = 0; i < n; i++) {
-                int g = 0, s = 0;
-                for (int j = 0; j < m; j++) {
-                    if (rect[i][j] == 'G') g = j;
-                    if (rect[i][j] == 'S') s = j;
-                }
-                if (g < s) hs.add(s - g);
-                else if (s < g) {
-                    out.printLine("-1");
-                    return;
+                if (s.charAt(i) == '1') {
+                    for (int j = i; j <= i + d && j < n; j++) {
+                        if (s.charAt(j) == '1')
+                            dp[j] = Math.min(dp[j], dp[i] + 1);
+                    }
                 }
             }
-            out.printLine(hs.size());
+            if (dp[n - 1] == 10000) out.printLine(-1);
+            else out.printLine(dp[n - 1]);
+        }
+
+    }
+
+    static class OutputWriter {
+        private final PrintWriter writer;
+
+        public OutputWriter(OutputStream outputStream) {
+            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
+        }
+
+        public OutputWriter(Writer writer) {
+            this.writer = new PrintWriter(writer);
+        }
+
+        public void close() {
+            writer.close();
+        }
+
+        public void printLine(int i) {
+            writer.println(i);
         }
 
     }
@@ -63,22 +83,6 @@ public class Main {
 
         public static boolean isWhitespace(int c) {
             return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
-        }
-
-        public char[] readCharArray(int size) {
-            char[] array = new char[size];
-            for (int i = 0; i < size; i++) {
-                array[i] = readCharacter();
-            }
-            return array;
-        }
-
-        public char[][] readTable(int rowCount, int columnCount) {
-            char[][] table = new char[rowCount][];
-            for (int i = 0; i < rowCount; i++) {
-                table[i] = this.readCharArray(columnCount);
-            }
-            return table;
         }
 
         public int read() {
@@ -128,52 +132,29 @@ public class Main {
             return isWhitespace(c);
         }
 
-        public char readCharacter() {
+        private String readLine0() {
+            StringBuilder buf = new StringBuilder();
             int c = read();
-            while (isSpaceChar(c)) {
+            while (c != '\n' && c != -1) {
+                if (c != '\r') {
+                    buf.appendCodePoint(c);
+                }
                 c = read();
             }
-            return (char) c;
+            return buf.toString();
+        }
+
+        public String readLine() {
+            String s = readLine0();
+            while (s.trim().length() == 0) {
+                s = readLine0();
+            }
+            return s;
         }
 
         public interface SpaceCharFilter {
             boolean isSpaceChar(int ch);
 
-        }
-
-    }
-
-    static class OutputWriter {
-        private final PrintWriter writer;
-
-        public OutputWriter(OutputStream outputStream) {
-            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
-        }
-
-        public OutputWriter(Writer writer) {
-            this.writer = new PrintWriter(writer);
-        }
-
-        public void print(Object... objects) {
-            for (int i = 0; i < objects.length; i++) {
-                if (i != 0) {
-                    writer.print(' ');
-                }
-                writer.print(objects[i]);
-            }
-        }
-
-        public void printLine(Object... objects) {
-            print(objects);
-            writer.println();
-        }
-
-        public void close() {
-            writer.close();
-        }
-
-        public void printLine(int i) {
-            writer.println(i);
         }
 
     }

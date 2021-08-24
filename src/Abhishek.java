@@ -22,6 +22,7 @@ public class Abhishek {
         }
         if (inversion) System.out.println("unrated");
         else System.out.println("maybe");
+        int princ = in.nextInt();
 
     }
 }
