@@ -1,73 +1,129 @@
 package helpers;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class MyGraph {
     int n;
-    ArrayList<HashSet<Long>> al = new ArrayList<>();
-    long[] smaller, bigger;
+    long edges, vertices;
+    ArrayList<ArrayList<Integer>> adj;
+    boolean[] vis;
 
     public MyGraph(int n) {
         this.n = n;
-        smaller = new long[n];
-        bigger = new long[n];
+        edges = vertices = 0;
+        vis = new boolean[n];
+        adj = new ArrayList<>();
         for (long i = 0; i < n; i++) {
-            al.add(new HashSet<>());
+            adj.add(new ArrayList<>());
         }
     }
 
+
     public void addEdge(int from, int to) {
-        al.get(from).add((long) to);
-        al.get(to).add((long) from);
-        if (from > to) {
-            bigger[to]++;
-            smaller[from]++;
-        } else {
-            bigger[from]++;
-            smaller[to]++;
-        }
+        adj.get(from).add(to);
+        adj.get(to).add(from);
+
     }
 
     public void removeEdge(int from, int to) {
-        al.get(from).remove(new Long(to));
-        al.get(to).remove(new Long(from));
-        if (from > to) {
-            bigger[to]--;
-            smaller[from]--;
-        } else {
-            bigger[from]--;
-            smaller[to]--;
-        }
+        adj.get(from).remove(new Integer(to));
+        adj.get(to).remove(new Integer(from));
     }
 
+    public boolean detectCycleDirected(boolean[] vis, boolean[] rec, int s) {
+        vis[s] = true;
+        rec[s] = true;
+        for (int v : adj.get(s)) {
+            if (!vis[v]) {
+                if (detectCycleDirected(vis, rec, v)) return true;
+            } else if (rec[v]) return true;
+        }
+        rec[s] = false;
+        return false;
+    }
 
-    public long bfs() {
-        long[] big = bigger.clone(), small = smaller.clone();
-        long res = 0;
-        Queue<Long> q = new LinkedList<>();
+    public int countBipertite() {
+        int[] clr = new int[n];
+        Arrays.fill(clr, -1);
+        int count = 0;
         for (int i = 0; i < n; i++) {
-            if (small[i] == 0 && big[i] != 0) {
-                q.add((long) i);
+            if (clr[i] == -1) {
+                if (!bfsBiperCheck(clr, i))
+                    count++;
+            }
+        }
+        return count;
+    }
+
+    private boolean bfsBiperCheck(int[] clr, int i) {
+        if (clr[i] == -1) clr[i] = 1;
+        Queue<Integer> q = new LinkedList<>();
+        q.add(i);
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (int v : adj.get(u)) {
+                if (clr[v] == -1) {
+                    clr[v] = 1 - clr[u];
+                    q.add(v);
+                } else if (clr[u] == clr[v])
+                    return false;
+            }
+        }
+        return true;
+
+    }
+
+    public List<Integer> topologicalSort() {
+        int[] indegree = new int[n];
+        int[] res = new int[n];
+        Arrays.fill(res, -1);
+        for (int i = 0; i < n; i++) {
+            for (int j : adj.get(i)) {
+                indegree[j]++;
+            }
+        }
+        Queue<Integer> q = new LinkedList<>();
+        ArrayList<Integer> al = new ArrayList<>();
+        boolean first = false;
+        for (int i = 0; i < n; i++) {
+            if (indegree[i] == 0) {
+                q.add(i);
+
             }
         }
         while (!q.isEmpty()) {
-            long k = q.poll();
-            int u = (int) k;
-            res++;
-            small[u] = 0;
-            for (long v : al.get(u)) {
-                small[(int) v]--;
-                if (small[(int) v] == 0 && big[(int) v] != 0) {
-                    q.add(v);
-                }
+            int u = q.poll();
+            al.add(u);
+            for (int i : adj.get(u)) {
+                --indegree[i];
+                if (indegree[i] == 0)
+                    q.add(i);
             }
-
         }
-        return res;
-
+        return al;
     }
+
+    public int countConnectedComponents() {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (!vis[i]) {
+                count++;
+                dfs(i);
+            }
+        }
+        return count;
+    }
+
+    private void dfs(int i) {
+        vertices++;
+        edges += adj.get(i).size();
+        vis[i] = true;
+        for (int j : adj.get(i)) {
+            if (!vis[j]) {
+                dfs(j);
+            }
+        }
+    }
+
 
 }

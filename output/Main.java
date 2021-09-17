@@ -3,13 +3,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.io.BufferedWriter;
 import java.io.Writer;
 import java.io.OutputStreamWriter;
 import java.util.InputMismatchException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 /**
  * Built using CHelper plug-in
@@ -23,28 +23,23 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         OutputWriter out = new OutputWriter(outputStream);
-        TaskA solver = new TaskA();
+        TaskB solver = new TaskB();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskA {
+    static class TaskB {
         public void solve(int testNumber, InputReader in, OutputWriter out) {
-            int n = in.readInt(), d = in.readInt();
-            String s = in.readLine();
-            int[] dp = new int[n];
-            Arrays.fill(dp, 10000);
-            dp[0] = 0;
-            for (int i = 0; i < n; i++) {
-                if (s.charAt(i) == '1') {
-                    for (int j = i; j <= i + d && j < n; j++) {
-                        if (s.charAt(j) == '1')
-                            dp[j] = Math.min(dp[j], dp[i] + 1);
-                    }
-                }
+            int n = in.readInt(), m = in.readInt();
+            MyGraph graph = new MyGraph(n);
+            for (int i = 0; i < m; i++) {
+                int a = in.readInt() - 1, b = in.readInt() - 1;
+                graph.addEdge(a, b);
             }
-            if (dp[n - 1] == 10000) out.printLine(-1);
-            else out.printLine(dp[n - 1]);
+            if (graph.go())
+                out.printLine("YES");
+            else out.printLine("NO");
+
         }
 
     }
@@ -60,12 +55,22 @@ public class Main {
             this.writer = new PrintWriter(writer);
         }
 
-        public void close() {
-            writer.close();
+        public void print(Object... objects) {
+            for (int i = 0; i < objects.length; i++) {
+                if (i != 0) {
+                    writer.print(' ');
+                }
+                writer.print(objects[i]);
+            }
         }
 
-        public void printLine(int i) {
-            writer.println(i);
+        public void printLine(Object... objects) {
+            print(objects);
+            writer.println();
+        }
+
+        public void close() {
+            writer.close();
         }
 
     }
@@ -132,29 +137,57 @@ public class Main {
             return isWhitespace(c);
         }
 
-        private String readLine0() {
-            StringBuilder buf = new StringBuilder();
-            int c = read();
-            while (c != '\n' && c != -1) {
-                if (c != '\r') {
-                    buf.appendCodePoint(c);
-                }
-                c = read();
-            }
-            return buf.toString();
-        }
-
-        public String readLine() {
-            String s = readLine0();
-            while (s.trim().length() == 0) {
-                s = readLine0();
-            }
-            return s;
-        }
-
         public interface SpaceCharFilter {
             boolean isSpaceChar(int ch);
 
+        }
+
+    }
+
+    static class MyGraph {
+        int n;
+        long edges;
+        long vertices;
+        ArrayList<ArrayList<Integer>> adj;
+        boolean[] vis;
+
+        public MyGraph(int n) {
+            this.n = n;
+            vis = new boolean[n];
+            adj = new ArrayList<>();
+            for (long i = 0; i < n; i++) {
+                adj.add(new ArrayList<>());
+            }
+        }
+
+        public void addEdge(int from, int to) {
+            adj.get(from).add(to);
+            adj.get(to).add(from);
+
+        }
+
+        private void dfs(int i) {
+            vertices++;
+            edges += adj.get(i).size();
+            vis[i] = true;
+            for (int j : adj.get(i)) {
+                if (!vis[j]) {
+                    dfs(j);
+                }
+            }
+        }
+
+        public boolean go() {
+            for (int i = 0; i < n; i++) {
+                if (!vis[i]) {
+                    edges = vertices = 0;
+                    dfs(i);
+                    if (edges != vertices * (vertices - 1)) {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
     }
