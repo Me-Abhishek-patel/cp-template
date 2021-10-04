@@ -1,7 +1,8 @@
 package net.cplibrary.generated.collections.pair;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class DoubleIntPair implements Comparable<DoubleIntPair> {
     public final double first;

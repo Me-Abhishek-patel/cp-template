@@ -657,8 +657,8 @@ public class ArrayUtils {
         return result;
     }
 
-    public static int[] prefixSumArray(int[] arr) {
-        int[] result = new int[arr.length];
+    public static long[] prefixSumArray(int[] arr) {
+        long[] result = new long[arr.length];
         result[0] = arr[0];
         for (int i = 1; i < arr.length; i++) {
             result[i] = result[i - 1] + arr[i];
@@ -687,6 +687,22 @@ public class ArrayUtils {
     public static void shuffleAndSort(int[] a) {
         shuffle(a);
         Arrays.sort(a);
+    }
+
+    public static Integer[] toIntegerArray(int[] a) {
+        Integer[] result = new Integer[a.length];
+        for (int i = 0; i < a.length; i++) {
+            result[i] = a[i];
+        }
+        return result;
+    }
+
+    public static int[] toIntArray(Integer[] a) {
+        int[] result = new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            result[i] = a[i];
+        }
+        return result;
     }
 
 }

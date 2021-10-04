@@ -1,7 +1,8 @@
 package net.cplibrary.generated.collections.pair;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class LongVPair<V> implements Comparable<LongVPair<V>> {
     public final long first;

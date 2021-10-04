@@ -6,7 +6,8 @@ import net.cplibrary.generated.collections.function.*;
 import net.cplibrary.generated.collections.iterator.CharIterator;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public interface CharList extends CharReversableCollection {
     CharList EMPTY = new CharArray(new char[0]);

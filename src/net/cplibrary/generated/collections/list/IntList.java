@@ -6,7 +6,8 @@ import net.cplibrary.generated.collections.function.*;
 import net.cplibrary.generated.collections.iterator.IntIterator;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public interface IntList extends IntReversableCollection {
     IntList EMPTY = new IntArray(new int[0]);

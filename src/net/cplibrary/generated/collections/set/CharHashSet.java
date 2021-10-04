@@ -11,7 +11,8 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class CharHashSet extends CharAbstractStream implements CharSet {
     private static final Random RND = new Random();

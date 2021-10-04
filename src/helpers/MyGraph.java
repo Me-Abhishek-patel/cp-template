@@ -5,7 +5,7 @@ import java.util.*;
 public class MyGraph {
     int n;
     long edges, vertices;
-    ArrayList<ArrayList<Integer>> adj;
+    public ArrayList<ArrayList<Integer>> adj;
     boolean[] vis;
 
     public MyGraph(int n) {

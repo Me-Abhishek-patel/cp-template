@@ -3,7 +3,8 @@ package net.cplibrary.generated.collections;
 import net.cplibrary.generated.collections.iterator.IntIterator;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public interface IntCollection extends IntStream {
     //abstract

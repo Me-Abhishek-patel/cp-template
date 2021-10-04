@@ -238,4 +238,34 @@ public class Matrix {
         }
         return result;
     }
+
+    public long trace() {
+        long ret = 0;
+        for (long[] row : this.data) {
+            for (long l : row) {
+                ret += l;
+            }
+        }
+        return ret;
+    }
+
+    public Matrix rotateRight() {
+        Matrix result = new Matrix(columnCount, rowCount);
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
+                result.data[j][rowCount - 1 - i] = this.data[i][j];
+            }
+        }
+        return result;
+    }
+
+    public Matrix reflect() {
+        Matrix result = new Matrix(rowCount, columnCount);
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
+                result.data[i][columnCount - 1 - j] = this.data[i][j];
+            }
+        }
+        return result;
+    }
 }

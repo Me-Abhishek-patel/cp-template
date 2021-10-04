@@ -1,7 +1,8 @@
 package net.cplibrary.generated.collections.function;
 
 /**
- * @author Egor Kulikov
+ * @author Abhishek Patel (abhishekpatelmrj@gmail.com)
+ * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public interface DoubleToDoubleFunction {
     double value(double key);
