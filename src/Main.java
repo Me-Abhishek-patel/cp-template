@@ -1,29 +1,66 @@
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        class Inner {
-            final String name;
+    static boolean eps = false;
 
-            public Inner(String s) {
-                name = s;
-            }
-        }
-        Object obj = new Inner("AAA");
-        Inner t = (Inner) obj;
-        System.out.println(t.name);
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        convert(s);
     }
 
     private static void convert(String s) {
-        char a = s.charAt(0);
+        String a = s.substring(0, s.indexOf('>') - 1);
         String[] t = s.substring(s.indexOf('>') + 1).split("\\|");
+        ArrayList<String> al = new ArrayList<>(Arrays.asList(t));
+        Collections.sort(al);
+        for (int i = 0; i < al.size(); i++) {
+
+        }
+
+
+        eps = false;
+//        System.out.println(Arrays.toString(t));
+
+        StringBuilder sb = checkAmbiguity(t);
+
+
+        if (sb.length() >= 1) {
+            System.out.println(a + "->" + sb + a + "'");
+            StringBuilder newSb = new StringBuilder();
+            newSb.append(a).append("'->");
+            boolean ep = false;
+
+            if (ep) newSb.append("E");
+            System.out.println(newSb);
+            System.out.println("\n\n");
+
+            convert(newSb.toString());
+
+        }
+
+    }
+
+    private static StringBuilder checkAmbiguity(String[] t) {
+
         StringBuilder sb = new StringBuilder();
         int k = 0;
         boolean x = true;
         while (x && t.length > 0) {
-            char c = t[0].charAt(k);
-            for (int i = 0; i < t.length; i++) {
+            char c = '.';
+            if (k < t[0].length())
+                c = t[0].charAt(k);
+            int i = 0;
+            for (; i < t.length; i++) {
+                if (k >= t[i].length()) {
+                    eps = true;
+                    continue;
+                }
                 if (t[i].charAt(k) != c) {
                     x = false;
                     break;
@@ -31,26 +68,11 @@ public class Main {
             }
             k++;
             if (x) sb.append(c);
+
         }
-        if (sb.length() >= 1) {
-            System.out.println(a + "->" + sb + a + "'");
-            System.out.print(a + "'->");
-            boolean ep = false;
-            for (int i = 0; i < t.length; i++) {
-                if (sb.length() != t[i].length()) {
-                    System.out.print(t[i].substring(sb.length()) + "|");
-                } else ep = true;
-
-            }
-            if (ep) System.out.print("E");
-            System.out.println("\n\n");
-        } else System.out.println(s);
-
+        return sb;
     }
-
-
 }
-
 
 
 

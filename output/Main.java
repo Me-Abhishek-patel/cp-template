@@ -3,11 +3,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.io.BufferedWriter;
 import java.io.Writer;
 import java.io.OutputStreamWriter;
 import java.util.InputMismatchException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.io.InputStream;
 
 /**
@@ -22,48 +24,54 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         OutputWriter out = new OutputWriter(outputStream);
-        LongestANDSubarray solver = new LongestANDSubarray();
-        int testCount = Integer.parseInt(in.next());
-        for (int i = 1; i <= testCount; i++)
-            solver.solve(i, in, out);
+        BDuffInLove solver = new BDuffInLove();
+        solver.solve(1, in, out);
         out.close();
     }
 
-    static class LongestANDSubarray {
+    static class BDuffInLove {
         public void solve(int testNumber, InputReader in, OutputWriter out) {
-            int n = in.readInt();
-            int t = n, cnt = 0;
-            while (t > 0) {
-                t = t >> 1;
-                cnt++;
+            long n = in.readLong();
+            if (n <= 3) {
+                out.printLine(n);
+                return;
             }
-            int mask = (1 << cnt - 1);
-            if (mask == n) {
-                out.printLine(n - (mask >> 1));
-            } else {
-                out.printLine(Math.max(n - mask + 1, mask - (mask >> 1)));
+            ArrayList<Integer> primes = sieve((int) Math.sqrt(n) + 2);
+            int i = 0;
+            long k = primes.get(i);
+            long res = 1;
+            while (k * k <= n) {
+                boolean x = true;
+                while (n % k == 0) {
+                    if (x) {
+                        res *= k;
+                        x = false;
+                    }
+                    n = n / k;
+                }
+                i++;
+                if (i == primes.size()) break;
+                k = primes.get(i);
             }
+//        out.printLine(primes.toString());
+            if (n != 1) res *= n;
+            out.printLine(res);
+
         }
 
-    }
-
-    static class OutputWriter {
-        private final PrintWriter writer;
-
-        public OutputWriter(OutputStream outputStream) {
-            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
-        }
-
-        public OutputWriter(Writer writer) {
-            this.writer = new PrintWriter(writer);
-        }
-
-        public void close() {
-            writer.close();
-        }
-
-        public void printLine(int i) {
-            writer.println(i);
+        private ArrayList<Integer> sieve(int n) {
+            boolean[] s = new boolean[n + 5];
+            Arrays.fill(s, true);
+            ArrayList<Integer> al = new ArrayList<>();
+            for (int i = 2; i <= n; i++) {
+                if (s[i]) {
+                    al.add(i);
+                    for (long j = (long) i * i; j <= n; j += i) {
+                        s[(int) j] = false;
+                    }
+                }
+            }
+            return al;
         }
 
     }
@@ -101,7 +109,7 @@ public class Main {
             return buf[curChar++];
         }
 
-        public int readInt() {
+        public long readLong() {
             int c = read();
             while (isSpaceChar(c)) {
                 c = read();
@@ -111,7 +119,7 @@ public class Main {
                 sgn = -1;
                 c = read();
             }
-            int res = 0;
+            long res = 0;
             do {
                 if (c < '0' || c > '9') {
                     throw new InputMismatchException();
@@ -123,21 +131,6 @@ public class Main {
             return res * sgn;
         }
 
-        public String readString() {
-            int c = read();
-            while (isSpaceChar(c)) {
-                c = read();
-            }
-            StringBuilder res = new StringBuilder();
-            do {
-                if (Character.isValidCodePoint(c)) {
-                    res.appendCodePoint(c);
-                }
-                c = read();
-            } while (!isSpaceChar(c));
-            return res.toString();
-        }
-
         public boolean isSpaceChar(int c) {
             if (filter != null) {
                 return filter.isSpaceChar(c);
@@ -145,13 +138,30 @@ public class Main {
             return isWhitespace(c);
         }
 
-        public String next() {
-            return readString();
-        }
-
         public interface SpaceCharFilter {
             boolean isSpaceChar(int ch);
 
+        }
+
+    }
+
+    static class OutputWriter {
+        private final PrintWriter writer;
+
+        public OutputWriter(OutputStream outputStream) {
+            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
+        }
+
+        public OutputWriter(Writer writer) {
+            this.writer = new PrintWriter(writer);
+        }
+
+        public void close() {
+            writer.close();
+        }
+
+        public void printLine(long i) {
+            writer.println(i);
         }
 
     }
