@@ -1,7 +1,9 @@
 package helpers;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.PriorityQueue;
 
 public class MyWeightedGraph {
     public ArrayList<ArrayList<Edge>> adj;
@@ -10,6 +12,7 @@ public class MyWeightedGraph {
     int n;
     long edges, vertices;
     boolean[] vis;
+
 
     public MyWeightedGraph(int n) {
         this.n = n;
@@ -21,37 +24,65 @@ public class MyWeightedGraph {
         }
     }
 
+    int min = 0;
+
     public void addEdge(int from, int to, int weight) {
         adj.get(from).add(new Edge(to, weight));
-        adj.get(to).add(new Edge(from, weight));
+//        adj.get(to).add(new Edge(from, weight));
     }
 
-    public int getMin() {
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < n; i++) {
-            if (!hs.contains(i) && !vis[i]) {
-                min = Math.min(dfs(i), min);
+    public PriorityQueue<Edge> go() {
+        PriorityQueue<Edge> pq = new PriorityQueue<>(new Comparator<Edge>() {
+            @Override
+            public int compare(Edge o1, Edge o2) {
+                return o1.getFrom() - o2.getFrom();
+            }
+        });
+        int[] indegre = new int[n];
+        for (ArrayList<Edge> edgeArrayList : adj) {
+            for (Edge edge : edgeArrayList) {
+                indegre[edge.getTo()]++;
             }
         }
-        return min;
+        for (int i = 0; i < n; i++) {
+            if (!vis[i] && indegre[i] == 0 && adj.get(i).size() == 1) {
+                min = Integer.MAX_VALUE;
+                int to = dfs2(i);
+                pq.add(new Edge(i + 1, to + 1, min));
+            }
+        }
+        return pq;
     }
 
-    private int dfs(int i) {
-        int min = Integer.MAX_VALUE;
+    private int dfs2(int i) {
+        if (adj.get(i).size() == 1) {
+            min = Math.min(min, adj.get(i).get(0).getWeight());
+            return dfs2(adj.get(i).get(0).getTo());
+        } else return i;
+    }
+
+    private void dfs(int i) {
         vis[i] = true;
         for (Edge edge : adj.get(i)) {
             if (!vis[edge.getTo()]) {
-                if (hs.contains(edge.getTo())) {
-                    min = Math.min(min, edge.getWeight());
-                } else {
-                    min = Math.min(min, dfs(edge.getTo()));
-                }
+                dfs(edge.getTo());
             }
         }
-        return min;
+
     }
 
-    static class Edge {
+    public void printAdjacency() {
+        for (int i = 0; i < adj.size(); i++) {
+            ArrayList<Edge> edgeArrayList = adj.get(i);
+            System.out.print(i + " : ");
+            for (Edge edge : edgeArrayList) {
+                System.out.print("(" + edge.getTo() + "," + edge.getWeight() + ")");
+            }
+            System.out.println();
+        }
+    }
+
+    public static class Edge {
         int from = -1, to, weight;
 
         public Edge(int from, int to, int weight) {

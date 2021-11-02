@@ -705,4 +705,49 @@ public class ArrayUtils {
         return result;
     }
 
+    public static int upperBound(int[] arr, int key) {
+        int r = arr.length, l = 0, m = l + (r - l) / 2;
+        while (l < r) {
+            if (arr[m] <= key) l = m + 1;
+            else r = m;
+            m = l + (r - l) / 2;
+        }
+        return m;
+    }
+
+    public static int lowerBound(int[] arr, int key) {
+        /*
+          returns the index of the next smallest number just greater than or equal to that number.
+          If there are multiple values that are equal to key, it returns the index of the first such value.
+         */
+        int l = 0, r = arr.length, m = l + (r - l) / 2;
+        while (l < r) {
+            if (arr[m] < key) l = m + 1;
+            else r = m;
+            m = l + (r - l) / 2;
+        }
+        return m;
+    }
+
+    public static int lowerBound(int[] arr, int key, int l, int r) {
+        int m = l + (r - l) / 2;
+        while (l < r) {
+            if (arr[m] < key) l = m + 1;
+            else r = m;
+            m = l + (r - l) / 2;
+        }
+        return m;
+    }
+
+    public static int upperBound(int[] arr, int key, int l, int r) {
+        int m = l + (r - l) / 2;
+        while (l < r) {
+            if (arr[m] <= key) l = m + 1;
+            else r = m;
+            m = l + (r - l) / 2;
+        }
+        return m;
+    }
+
+
 }

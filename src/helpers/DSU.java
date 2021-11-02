@@ -1,7 +1,7 @@
 package helpers;
 
 public class DSU {
-    int[] rank, parent, size;
+    public int[] rank, parent, size;
     int n;
 
     public DSU(int n) {
@@ -19,14 +19,14 @@ public class DSU {
         }
     }
 
-    int find(int x) {
+    public int find(int x) {
         if (parent[x] != x)
             parent[x] = find(parent[x]);
 
         return parent[x];
     }
 
-    void union(int x, int y) {
+    public void union(int x, int y) {
         int xRoot = find(x), yRoot = find(y);
 
         if (xRoot == yRoot)

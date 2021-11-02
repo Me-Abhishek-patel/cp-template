@@ -5,11 +5,13 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.io.BufferedWriter;
-import java.io.Writer;
-import java.io.OutputStreamWriter;
+import java.util.Collection;
 import java.util.InputMismatchException;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.Writer;
+import java.io.OutputStreamWriter;
+import java.util.Queue;
+import java.util.LinkedList;
 import java.io.InputStream;
 
 /**
@@ -24,54 +26,85 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         OutputWriter out = new OutputWriter(outputStream);
-        BDuffInLove solver = new BDuffInLove();
-        solver.solve(1, in, out);
+        Bitmap solver = new Bitmap();
+        int testCount = Integer.parseInt(in.next());
+        for (int i = 1; i <= testCount; i++)
+            solver.solve(i, in, out);
         out.close();
     }
 
-    static class BDuffInLove {
-        public void solve(int testNumber, InputReader in, OutputWriter out) {
-            long n = in.readLong();
-            if (n <= 3) {
-                out.printLine(n);
-                return;
-            }
-            ArrayList<Integer> primes = sieve((int) Math.sqrt(n) + 2);
-            int i = 0;
-            long k = primes.get(i);
-            long res = 1;
-            while (k * k <= n) {
-                boolean x = true;
-                while (n % k == 0) {
-                    if (x) {
-                        res *= k;
-                        x = false;
-                    }
-                    n = n / k;
-                }
-                i++;
-                if (i == primes.size()) break;
-                k = primes.get(i);
-            }
-//        out.printLine(primes.toString());
-            if (n != 1) res *= n;
-            out.printLine(res);
+    static class Bitmap {
+        int[] row = {-1, 1, 0, 0};
+        int[] col = {0, 0, -1, 1};
+        boolean[][] vis;
 
+        public void solve(int testNumber, InputReader in, OutputWriter out) {
+            int n = in.readInt(), m = in.readInt();
+            char[][] a = in.readTable(n, m);
+            int[][] res = new int[n][m];
+            vis = new boolean[n][m];
+            for (int i = 0; i < res.length; i++) {
+                Arrays.fill(res[i], Integer.MAX_VALUE);
+            }
+            Queue<IntIntPair> q = new LinkedList<>();
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    if (a[i][j] == '1') {
+                        q.add(new IntIntPair(i, j));
+                        res[i][j] = 0;
+                        vis[i][j] = true;
+                    }
+                }
+            }
+            dfs(a, res, q);
+            for (int i = 0; i < n; i++) {
+                out.printLine(res[i]);
+            }
         }
 
-        private ArrayList<Integer> sieve(int n) {
-            boolean[] s = new boolean[n + 5];
-            Arrays.fill(s, true);
-            ArrayList<Integer> al = new ArrayList<>();
-            for (int i = 2; i <= n; i++) {
-                if (s[i]) {
-                    al.add(i);
-                    for (long j = (long) i * i; j <= n; j += i) {
-                        s[(int) j] = false;
+        private void dfs(char[][] a, int[][] res, Queue<IntIntPair> q) {
+            while (!q.isEmpty()) {
+                IntIntPair p = q.poll();
+                for (int i = 0; i < row.length; i++) {
+                    int x = p.first + row[i], y = p.second + col[i];
+                    if (x >= 0 && x < a.length && y >= 0 && y < a[0].length && !vis[x][y]) {
+                        res[x][y] = res[p.first][p.second] + 1;
+                        q.add(new IntIntPair(x, y));
+                        vis[x][y] = true;
                     }
                 }
             }
-            return al;
+        }
+
+    }
+
+    static class OutputWriter {
+        private final PrintWriter writer;
+
+        public OutputWriter(OutputStream outputStream) {
+            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
+        }
+
+        public OutputWriter(Writer writer) {
+            this.writer = new PrintWriter(writer);
+        }
+
+        public void print(int[] array) {
+            for (int i = 0; i < array.length; i++) {
+                if (i != 0) {
+                    writer.print(' ');
+                }
+                writer.print(array[i]);
+            }
+        }
+
+        public void printLine(int[] array) {
+            print(array);
+            writer.println();
+        }
+
+        public void close() {
+            writer.close();
         }
 
     }
@@ -89,6 +122,22 @@ public class Main {
 
         public static boolean isWhitespace(int c) {
             return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
+        }
+
+        public char[] readCharArray(int size) {
+            char[] array = new char[size];
+            for (int i = 0; i < size; i++) {
+                array[i] = readCharacter();
+            }
+            return array;
+        }
+
+        public char[][] readTable(int rowCount, int columnCount) {
+            char[][] table = new char[rowCount][];
+            for (int i = 0; i < rowCount; i++) {
+                table[i] = this.readCharArray(columnCount);
+            }
+            return table;
         }
 
         public int read() {
@@ -109,7 +158,7 @@ public class Main {
             return buf[curChar++];
         }
 
-        public long readLong() {
+        public int readInt() {
             int c = read();
             while (isSpaceChar(c)) {
                 c = read();
@@ -119,7 +168,7 @@ public class Main {
                 sgn = -1;
                 c = read();
             }
-            long res = 0;
+            int res = 0;
             do {
                 if (c < '0' || c > '9') {
                     throw new InputMismatchException();
@@ -131,11 +180,38 @@ public class Main {
             return res * sgn;
         }
 
+        public String readString() {
+            int c = read();
+            while (isSpaceChar(c)) {
+                c = read();
+            }
+            StringBuilder res = new StringBuilder();
+            do {
+                if (Character.isValidCodePoint(c)) {
+                    res.appendCodePoint(c);
+                }
+                c = read();
+            } while (!isSpaceChar(c));
+            return res.toString();
+        }
+
         public boolean isSpaceChar(int c) {
             if (filter != null) {
                 return filter.isSpaceChar(c);
             }
             return isWhitespace(c);
+        }
+
+        public char readCharacter() {
+            int c = read();
+            while (isSpaceChar(c)) {
+                c = read();
+            }
+            return (char) c;
+        }
+
+        public String next() {
+            return readString();
         }
 
         public interface SpaceCharFilter {
@@ -145,23 +221,44 @@ public class Main {
 
     }
 
-    static class OutputWriter {
-        private final PrintWriter writer;
+    static class IntIntPair implements Comparable<IntIntPair> {
+        public final int first;
+        public final int second;
 
-        public OutputWriter(OutputStream outputStream) {
-            writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
+        public IntIntPair(int first, int second) {
+            this.first = first;
+            this.second = second;
         }
 
-        public OutputWriter(Writer writer) {
-            this.writer = new PrintWriter(writer);
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+
+            IntIntPair pair = (IntIntPair) o;
+
+            return first == pair.first && second == pair.second;
         }
 
-        public void close() {
-            writer.close();
+        public int hashCode() {
+            int result = first;
+            result = 31 * result + second;
+            return result;
         }
 
-        public void printLine(long i) {
-            writer.println(i);
+        public String toString() {
+            return "(" + first + "," + second + ")";
+        }
+
+        public int compareTo(IntIntPair o) {
+            int value = Integer.compare(first, o.first);
+            if (value != 0) {
+                return value;
+            }
+            return Integer.compare(second, o.second);
         }
 
     }

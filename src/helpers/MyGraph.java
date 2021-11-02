@@ -7,9 +7,12 @@ public class MyGraph {
     long edges, vertices;
     public ArrayList<ArrayList<Integer>> adj;
     boolean[] vis;
+    public HashSet<Integer> set1, set2;
 
     public MyGraph(int n) {
         this.n = n;
+        set1 = new HashSet<>();
+        set2 = new HashSet<>();
         edges = vertices = 0;
         vis = new boolean[n];
         adj = new ArrayList<>();
@@ -42,21 +45,24 @@ public class MyGraph {
         return false;
     }
 
-    public int countBipertite() {
+    public boolean countBipertite() {
         int[] clr = new int[n];
         Arrays.fill(clr, -1);
-        int count = 0;
+
         for (int i = 0; i < n; i++) {
             if (clr[i] == -1) {
-                if (!bfsBiperCheck(clr, i))
-                    count++;
+                if (bfsBiperCheck(clr, i))
+                    return false;
             }
         }
-        return count;
+        return true;
     }
 
     private boolean bfsBiperCheck(int[] clr, int i) {
-        if (clr[i] == -1) clr[i] = 1;
+        if (clr[i] == -1) {
+            clr[i] = 1;
+            set1.add(i);
+        }
         Queue<Integer> q = new LinkedList<>();
         q.add(i);
         while (!q.isEmpty()) {
@@ -64,6 +70,8 @@ public class MyGraph {
             for (int v : adj.get(u)) {
                 if (clr[v] == -1) {
                     clr[v] = 1 - clr[u];
+                    if (1 - clr[u] == 1) set1.add(v);
+                    else set2.add(v);
                     q.add(v);
                 } else if (clr[u] == clr[v])
                     return false;
@@ -107,20 +115,25 @@ public class MyGraph {
         int count = 0;
         for (int i = 0; i < n; i++) {
             if (!vis[i]) {
+
+
+                if (count == 0)
+                    dfs(i, set1);
+                else dfs(i, set2);
                 count++;
-                dfs(i);
             }
         }
         return count;
     }
 
-    private void dfs(int i) {
+    private void dfs(int i, HashSet<Integer> set2) {
         vertices++;
+        set2.add(i);
         edges += adj.get(i).size();
         vis[i] = true;
         for (int j : adj.get(i)) {
             if (!vis[j]) {
-                dfs(j);
+                dfs(j, set2);
             }
         }
     }

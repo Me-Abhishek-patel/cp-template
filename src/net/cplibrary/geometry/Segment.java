@@ -116,6 +116,11 @@ public class Segment {
         return null;
     }
 
+    public double distanceManhattan(Segment other) {
+
+        return Math.min(Math.abs(a.x - other.a.x), Math.abs(b.x - other.b.x)) + Math.min(Math.abs(a.y - other.a.y), Math.abs(b.y - other.b.y));
+    }
+
     public double distance(Segment other) {
         Line line = line();
         Line otherLine = other.line();

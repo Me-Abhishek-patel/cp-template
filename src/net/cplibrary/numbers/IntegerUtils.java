@@ -41,6 +41,10 @@ public class IntegerUtils {
         return a;
     }
 
+//    public ArrayList<Integer> generatePrimes(){
+//
+//    }
+
     public static int[] generatePrimes(int upTo) {
         int[] isPrime = generateBitPrimalityTable(upTo);
         IntList primes = new IntArrayList();

@@ -1,13 +1,10 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Abhishek {
     public static void main(String[] args) throws IOException {
-        String x = null;
-//        int arr[2];
-        System.out.println(args[0]);
+        Scanner in = new Scanner(System.in);
     }
 
-    private static void y(String x) {
-        x = "@";
-    }
+
 }

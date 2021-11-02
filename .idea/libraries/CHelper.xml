@@ -76,6 +76,41 @@
       <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
       <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
       <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/chelper.jar!/" />
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/chelper/lib/cojac.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
