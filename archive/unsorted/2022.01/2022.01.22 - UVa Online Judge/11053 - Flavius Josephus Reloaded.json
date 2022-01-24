@@ -1,0 +1,36 @@
+{
+  "name": "11053 - Flavius Josephus Reloaded",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "\n2 1 1\n5 1 1\n10 3 7\n101 9 2\n698253463 1 181945480\n1000000000 999999999 999999999\n0\n",
+      "output": "\n0\n2\n4\n96\n698177783\n999999994\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx32M",
+  "mainClass": "Main",
+  "taskClass": "codes.FlaviusJosephusReloaded",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.22",
+  "contestName": "UVa Online Judge",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

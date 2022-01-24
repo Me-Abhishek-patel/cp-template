@@ -1,0 +1,60 @@
+{
+  "name": "B. OR in Matrix",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "2 2\n1 0\n0 0\n",
+      "output": "NO\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "2 3\n1 1 1\n1 1 1\n",
+      "output": "YES\n1 1 1\n1 1 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "2 3\n0 1 0\n1 1 1\n",
+      "output": "YES\n0 0 0\n0 1 0\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "",
+      "output": "",
+      "index": 3,
+      "active": false
+    },
+    {
+      "input": "3 3\n1 0 0\n1 0 0\n1 0 0",
+      "output": "NO",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BORInMatrix",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.16",
+  "contestName": "Codeforces - Codeforces Round #277 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

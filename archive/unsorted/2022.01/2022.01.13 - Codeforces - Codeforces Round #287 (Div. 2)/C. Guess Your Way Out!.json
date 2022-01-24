@@ -1,0 +1,60 @@
+{
+  "name": "C. Guess Your Way Out!",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "1 2\n",
+      "output": "2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "2 3\n",
+      "output": "5\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "3 6\n",
+      "output": "10\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "10 1024\n",
+      "output": "2046\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "input": "39 457181784666",
+      "output": "830699159852",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CGuessYourWayOut",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.13",
+  "contestName": "Codeforces - Codeforces Round #287 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

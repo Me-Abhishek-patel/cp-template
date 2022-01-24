@@ -1,0 +1,54 @@
+{
+  "name": "B. Pasha Maximizes",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "1990 1\n",
+      "output": "9190\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "300 0\n",
+      "output": "300\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "1034 2\n",
+      "output": "3104\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "9090000078001234 6\n",
+      "output": "9907000008001234\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BPashaMaximizes",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.19",
+  "contestName": "Codeforces - Codeforces Round #249 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

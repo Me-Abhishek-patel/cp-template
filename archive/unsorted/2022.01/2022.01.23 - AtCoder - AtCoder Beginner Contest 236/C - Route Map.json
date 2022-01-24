@@ -1,0 +1,42 @@
+{
+  "name": "C - Route Map",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "5 3\ntokyo kanda akiba okachi ueno\ntokyo akiba ueno\n",
+      "output": "Yes\nNo\nYes\nNo\nYes\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "7 7\na t c o d e r\na t c o d e r\n",
+      "output": "Yes\nYes\nYes\nYes\nYes\nYes\nYes\n",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Main",
+  "taskClass": "codes.CRouteMap",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.23",
+  "contestName": "AtCoder - AtCoder Beginner Contest 236",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

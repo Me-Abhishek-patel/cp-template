@@ -1,0 +1,48 @@
+{
+  "name": "A. Maximum Increase",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "5\n1 7 2 11 15\n",
+      "output": "3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "6\n100 100 100 100 100 100\n",
+      "output": "1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "3\n1 2 3\n",
+      "output": "3\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.AMaximumIncrease",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.05",
+  "contestName": "Codeforces - Educational Codeforces Round 15",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

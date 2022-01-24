@@ -1,0 +1,48 @@
+{
+  "name": "C. Round Table Knights",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3\n1 1 1\n",
+      "output": "YES\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "6\n1 0 1 1 1 0\n",
+      "output": "YES\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "6\n1 0 0 1 0 1\n",
+      "output": "NO\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CRoundTableKnights",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.21",
+  "contestName": "Codeforces - Codeforces Beta Round #65 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

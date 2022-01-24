@@ -1,9 +1,8 @@
 package helpers;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.PriorityQueue;
+import net.cplibrary.generated.collections.pair.IntIntPair;
+
+import java.util.*;
 
 public class MyWeightedGraph {
     public ArrayList<ArrayList<Edge>> adj;
@@ -12,6 +11,7 @@ public class MyWeightedGraph {
     int n;
     long edges, vertices;
     boolean[] vis;
+    public HashMap<IntIntPair, Integer> hm;
 
 
     public MyWeightedGraph(int n) {
@@ -28,7 +28,7 @@ public class MyWeightedGraph {
 
     public void addEdge(int from, int to, int weight) {
         adj.get(from).add(new Edge(to, weight));
-//        adj.get(to).add(new Edge(from, weight));
+        adj.get(to).add(new Edge(from, weight));
     }
 
     public PriorityQueue<Edge> go() {
@@ -61,6 +61,7 @@ public class MyWeightedGraph {
         } else return i;
     }
 
+
     private void dfs(int i) {
         vis[i] = true;
         for (Edge edge : adj.get(i)) {
@@ -76,9 +77,27 @@ public class MyWeightedGraph {
             ArrayList<Edge> edgeArrayList = adj.get(i);
             System.out.print(i + " : ");
             for (Edge edge : edgeArrayList) {
-                System.out.print("(" + edge.getTo() + "," + edge.getWeight() + ")");
+                System.out.print("(" + edge.getTo() + "," + edge.getWeight() + ")  ");
             }
             System.out.println();
+        }
+    }
+
+    public void assignw(int i, int w) {
+        vis[i] = true;
+        for (Edge edge : adj.get(i)) {
+            if (!vis[edge.getTo()]) {
+                if (w == 5) {
+                    hm.put(IntIntPair.makePair(i, edge.getTo()), 2);
+                    hm.put(IntIntPair.makePair(edge.getTo(), i), 2);
+                    assignw(edge.getTo(), 2);
+                } else {
+                    hm.put(IntIntPair.makePair(i, edge.getTo()), 5);
+                    hm.put(IntIntPair.makePair(edge.getTo(), i), 5);
+
+                    assignw(edge.getTo(), 5);
+                }
+            }
         }
     }
 

@@ -7,13 +7,15 @@ public class MyGraph {
     long edges, vertices;
     public ArrayList<ArrayList<Integer>> adj;
     boolean[] vis;
-    public HashSet<Integer> set1, set2;
+    int[] indegree, outdegree;
+    boolean isLoop = false;
+
 
     public MyGraph(int n) {
         this.n = n;
-        set1 = new HashSet<>();
-        set2 = new HashSet<>();
         edges = vertices = 0;
+        indegree = new int[n];
+        outdegree = new int[n];
         vis = new boolean[n];
         adj = new ArrayList<>();
         for (long i = 0; i < n; i++) {
@@ -21,16 +23,15 @@ public class MyGraph {
         }
     }
 
-
     public void addEdge(int from, int to) {
         adj.get(from).add(to);
+        outdegree[from]++;
+        indegree[to]++;
+
         adj.get(to).add(from);
+        outdegree[to]++;
+        indegree[from]++;
 
-    }
-
-    public void removeEdge(int from, int to) {
-        adj.get(from).remove(new Integer(to));
-        adj.get(to).remove(new Integer(from));
     }
 
     public boolean detectCycleDirected(boolean[] vis, boolean[] rec, int s) {
@@ -45,40 +46,22 @@ public class MyGraph {
         return false;
     }
 
-    public boolean countBipertite() {
-        int[] clr = new int[n];
-        Arrays.fill(clr, -1);
-
-        for (int i = 0; i < n; i++) {
-            if (clr[i] == -1) {
-                if (bfsBiperCheck(clr, i))
-                    return false;
-            }
-        }
-        return true;
+    public void removeEdge(int from, int to) {
+        adj.get(from).remove(Integer.valueOf(to));
+        adj.get(to).remove(Integer.valueOf(from));
     }
 
-    private boolean bfsBiperCheck(int[] clr, int i) {
-        if (clr[i] == -1) {
-            clr[i] = 1;
-            set1.add(i);
-        }
-        Queue<Integer> q = new LinkedList<>();
-        q.add(i);
-        while (!q.isEmpty()) {
-            int u = q.poll();
-            for (int v : adj.get(u)) {
-                if (clr[v] == -1) {
-                    clr[v] = 1 - clr[u];
-                    if (1 - clr[u] == 1) set1.add(v);
-                    else set2.add(v);
-                    q.add(v);
-                } else if (clr[u] == clr[v])
-                    return false;
+    public int countBipertite() {
+        int[] clr = new int[n];
+        Arrays.fill(clr, -1);
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (clr[i] == -1) {
+                if (!bfsBiperCheck(clr, i))
+                    count++;
             }
         }
-        return true;
-
+        return count;
     }
 
     public List<Integer> topologicalSort() {
@@ -111,30 +94,53 @@ public class MyGraph {
         return al;
     }
 
+    private boolean bfsBiperCheck(int[] clr, int i) {
+        if (clr[i] == -1) clr[i] = 1;
+        Queue<Integer> q = new LinkedList<>();
+        q.add(i);
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (int v : adj.get(u)) {
+                if (clr[v] == -1) {
+                    clr[v] = 1 - clr[u];
+                    q.add(v);
+                } else if (clr[u] == clr[v])
+                    return false;
+            }
+        }
+        return true;
+
+    }
+
     public int countConnectedComponents() {
         int count = 0;
         for (int i = 0; i < n; i++) {
             if (!vis[i]) {
-
-
-                if (count == 0)
-                    dfs(i, set1);
-                else dfs(i, set2);
                 count++;
+                dfs(i);
             }
         }
         return count;
     }
 
-    private void dfs(int i, HashSet<Integer> set2) {
+    private void dfs(int i) {
         vertices++;
-        set2.add(i);
         edges += adj.get(i).size();
         vis[i] = true;
         for (int j : adj.get(i)) {
             if (!vis[j]) {
-                dfs(j, set2);
+                dfs(j);
             }
+        }
+    }
+
+    public void printAdjacency() {
+        for (int i = 0; i < adj.size(); i++) {
+            System.out.print(i + " : ");
+            for (int k : adj.get(i)) {
+                System.out.print(k + "  ");
+            }
+            System.out.println();
         }
     }
 

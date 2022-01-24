@@ -1,0 +1,48 @@
+{
+  "name": "B. Special Offer! Super Price 999 Bourles!",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "1029 102\n",
+      "output": "999\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "27191 17\n",
+      "output": "27189\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "2111 21",
+      "output": "",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BSpecialOfferSuperPrice999Bourles",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.23",
+  "contestName": "Codeforces - Codeforces Round #135 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

@@ -26,6 +26,12 @@ public class OutputWriter {
         }
     }
 
+    public void printIntTable(int[][] table) {
+        for (int[] row : table) {
+            printLine(row);
+        }
+    }
+
     public void print(char[] array) {
         writer.print(array);
     }

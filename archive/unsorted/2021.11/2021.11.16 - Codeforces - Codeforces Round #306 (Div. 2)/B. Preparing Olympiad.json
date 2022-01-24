@@ -1,0 +1,48 @@
+{
+  "name": "B. Preparing Olympiad",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3 5 6 1\n1 2 3\n",
+      "output": "2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "4 40 50 10\n10 20 30 25\n",
+      "output": "2\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "5 25 35 10\n10 10 20 10 20\n",
+      "output": "6\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BPreparingOlympiad",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.16",
+  "contestName": "Codeforces - Codeforces Round #306 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

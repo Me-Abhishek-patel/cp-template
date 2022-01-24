@@ -749,5 +749,20 @@ public class ArrayUtils {
         return m;
     }
 
+    public static int indexOf(int[] array, int value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) return i;
+        }
+        return -1;
+    }
+
+    public static int lastIndexOf(int[] array, int value) {
+        int idx = -1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) idx = i;
+        }
+        return idx;
+    }
+
 
 }

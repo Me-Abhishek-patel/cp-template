@@ -1,0 +1,42 @@
+{
+  "name": "B. Facetook Priority Wall",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "ahmed\n3\nahmed posted on fatma's wall\nfatma commented on ahmed's post\nmona likes ahmed's post\n",
+      "output": "fatma\nmona\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "aba\n1\nlikes likes posted's post\n",
+      "output": "likes\nposted\n",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BFacetookPriorityWall",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.20",
+  "contestName": "Codeforces - Codeforces Beta Round #67 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

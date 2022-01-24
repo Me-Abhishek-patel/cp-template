@@ -1,0 +1,42 @@
+{
+  "name": "C - Row Column Sums",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "2 4 3\n0 2\n1 2 2 0\n",
+      "output": "11\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3 3 4\n0 1 2\n1 2 3\n",
+      "output": "-1\n",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Main",
+  "taskClass": "codes.CRowColumnSums",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.22",
+  "contestName": "AtCoder - AtCoder Regular Contest 133",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

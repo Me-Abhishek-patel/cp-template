@@ -1,0 +1,36 @@
+{
+  "name": "C. Minimum Extraction",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "8\n1\n10\n2\n0 0\n3\n-1 2 0\n4\n2 10 1 7\n2\n2 3\n5\n3 2 -4 -2 0\n2\n-1 1\n1\n-2\n",
+      "output": "10\n0\n2\n5\n2\n2\n2\n-2\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CMinimumExtraction",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.02",
+  "contestName": "Codeforces - Codeforces Round #753 (Div. 3)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

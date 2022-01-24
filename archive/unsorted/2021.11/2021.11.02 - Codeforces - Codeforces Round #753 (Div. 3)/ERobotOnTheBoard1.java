@@ -3,10 +3,10 @@ package codes;
 import net.cplibrary.io.InputReader;
 import net.cplibrary.io.OutputWriter;
 
-public class ModularGCD {
+public class ERobotOnTheBoard1 {
     public void solve(int testNumber, InputReader in, OutputWriter out) {
-        long a = in.readLong(), b = in.readLong(), n = in.readLong();
-
+        int n = in.readInt(), m = in.readInt();
+        String s = in.readLine();
 
     }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "10509 - R U Kidding Mr. Feynman?",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "\n1729.0300\n64.0000\n63.9990\n17\n0\n",
+      "output": "\n12.0024\n4.0000\n4.3703\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx32M",
+  "mainClass": "Main",
+  "taskClass": "codes.RUKiddingMrFeynman",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.22",
+  "contestName": "UVa Online Judge",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

@@ -163,10 +163,10 @@ public class MiscUtils {
         return result;
     }
 
-    public static int distance(int x1, int y1, int x2, int y2) {
+    public static double distance(int x1, int y1, int x2, int y2) {
         int dx = x1 - x2;
         int dy = y1 - y2;
-        return dx * dx + dy * dy;
+        return Math.sqrt(dx * dx + dy * dy);
     }
 
     public static <T extends Comparable<T>> T min(T first, T second) {

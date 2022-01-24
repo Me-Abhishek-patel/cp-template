@@ -1,0 +1,42 @@
+{
+  "name": "E. Crazy Robot",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "4\n3 3\n...\n.L.\n...\n4 5\n#....\n..##L\n...#.\n.....\n1 1\nL\n1 9\n....L..#.\n",
+      "output": "...\n.L.\n...\n#++++\n..##L\n...#+\n...++\nL\n++++L++#.\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "1\n4 5\n#....\n..##L\n...#.\n.....",
+      "output": "",
+      "index": 1,
+      "active": false
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx512M",
+  "mainClass": "Main",
+  "taskClass": "codes.ECrazyRobot",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.12.01",
+  "contestName": "Codeforces - Educational Codeforces Round 118 (Rated for Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

@@ -238,6 +238,14 @@ public class StringUtils {
         return freq;
     }
 
+    public static int[] freqArray256(String s) {
+        int[] freq = new int[256];
+        for (char c : s.toCharArray()) {
+            freq[c]++;
+        }
+        return freq;
+    }
+
     public static boolean isPalindrome(String str) {
         for (int i = 0, j = str.length() - 1; i < j; i++, j--) {
             if (str.charAt(i) != str.charAt(j)) return false;

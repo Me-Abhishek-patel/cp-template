@@ -1,0 +1,42 @@
+{
+  "name": "Clean The Sequence",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "2\n8 2\n1 2 1 2 2 2 1 2\n8 3\n1 2 2 1 1 1 2 3\n",
+      "output": "0 0\n1 1 3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "1 1\n1",
+      "output": "",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CleanTheSequence",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2021.11.26",
+  "contestName": "CodeChef - FizzBuzz Division 2 (Rated)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

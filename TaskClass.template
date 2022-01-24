@@ -1,5 +1,14 @@
 package %package%;
 
+import static java.lang.Math.*;
+import static java.lang.String.*;
+import static net.cplibrary.numbers.IntegerUtils.MAX_VALUE;
+import static net.cplibrary.numbers.IntegerUtils.MIN_VALUE;
+import static net.cplibrary.misc.ArrayUtils.*;
+import static net.cplibrary.numbers.IntegerUtils.*;
+import static net.cplibrary.string.StringUtils.*;
+import static net.cplibrary.misc.MiscUtils.*;
+import static net.cplibrary.collections.CollectionUtils.*;
 import %InputClassFQN%;
 import %OutputClassFQN%;
 

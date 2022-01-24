@@ -19,6 +19,10 @@ public class IntegerUtils {
     private static long _x;
     private static long _y;
 
+    public static final int MIN_VALUE = 0x80000000;
+
+    public static final int MAX_VALUE = 0x7fffffff;
+
     public static long gcd(long a, long b) {
         a = Math.abs(a);
         b = Math.abs(b);
@@ -544,4 +548,5 @@ public class IntegerUtils {
     public static int ncr(int n, int r) {
         return (int) (rangeFactorial(r + 1, n) / factorial(n - r));
     }
+
 }

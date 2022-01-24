@@ -1,0 +1,48 @@
+{
+  "name": "A - Erase by Value",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "5\n2 4 4 1 2\n",
+      "output": "2 1 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3\n1 1 1\n",
+      "output": "\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "5\n1 1 2 3 3\n",
+      "output": "1 1 2\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Main",
+  "taskClass": "codes.AEraseByValue",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.22",
+  "contestName": "AtCoder - AtCoder Regular Contest 133",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}
