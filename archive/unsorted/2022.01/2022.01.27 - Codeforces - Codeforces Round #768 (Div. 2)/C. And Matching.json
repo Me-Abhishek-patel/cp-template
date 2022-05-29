@@ -1,0 +1,48 @@
+{
+  "name": "C. And Matching",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "4\n4 0\n4 1\n4 2\n4 3\n",
+      "output": "0 3\n1 2\n0 2\n1 3\n0 1\n2 3\n-1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "1\n1024 783",
+      "output": "",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "1\n8 0\n",
+      "output": "",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CAndMatching",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.27",
+  "contestName": "Codeforces - Codeforces Round #768 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

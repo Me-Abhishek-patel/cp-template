@@ -1,0 +1,48 @@
+{
+  "name": "Even Subarray XOR",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "4\n2\n3\n8\n35\n",
+      "output": "6 3\n11 14\n100000 98630 300000\n200000 199334 299999\n4 1 9 5\n7 2 10 6\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "",
+      "output": "",
+      "index": 1,
+      "active": false
+    },
+    {
+      "input": "1\n131072",
+      "output": "",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.EvenSubarrayXOR",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.05.18",
+  "contestName": "CodeChef - CodeChef Starters 39 Division 2 (Rated)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

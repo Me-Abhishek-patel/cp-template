@@ -1,0 +1,47 @@
+{
+  "name": "Palindrome Free Strings",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "2\n9\n100???001\n5\n100??\n",
+      "output": "Case #1: IMPOSSIBLE\nCase #2: POSSIBLE\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "input": "2\n5\n11111\n3\n010",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "3\n5\n11111\n5\n11111\n5\n11111",
+      "output": "",
+      "index": 2,
+      "active": false
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Solution",
+  "taskClass": "codes.PalindromeFreeStrings",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.03.20",
+  "contestName": "Google Coding Competitions - Round A 2022 - Kick Start 2022",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

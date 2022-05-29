@@ -1,0 +1,36 @@
+{
+  "name": "Anti Palindrome",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "4\n3\nabc\n8\nabccccdd\n4\nxyyx\n6\nppppqr\n",
+      "output": "NO\nYES\nabddcccc\nYES\nxxyy\nNO\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.AntiPalindrome",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.02.02",
+  "contestName": "CodeChef - CodeChef Starters 24 Division 2 (Rated)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

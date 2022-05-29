@@ -1,0 +1,36 @@
+{
+  "name": "B. XY Sequence",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3\n5 100 1 30\n7 1000000000 1000000000 1000000000\n4 1 7 3\n",
+      "output": "15\n4000000000\n-10\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BXYSequence",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.03.22",
+  "contestName": "Codeforces - Educational Codeforces Round 125 (Rated for Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

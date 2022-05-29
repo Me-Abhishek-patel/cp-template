@@ -1,0 +1,42 @@
+{
+  "name": "Speed Typing",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "2\naaaa\naaaaa\nbbbbb\nbbbbc\n",
+      "output": "Case #1: 1\nCase #2: IMPOSSIBLE\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "2\nIlovecoding\nIIllovecoding\nKickstartIsFun\nkkickstartiisfun\n",
+      "output": "Case #1: 2\nCase #2: IMPOSSIBLE\n",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Solution",
+  "taskClass": "codes.SpeedTyping",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.03.20",
+  "contestName": "Google Coding Competitions - Round A 2022 - Kick Start 2022",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

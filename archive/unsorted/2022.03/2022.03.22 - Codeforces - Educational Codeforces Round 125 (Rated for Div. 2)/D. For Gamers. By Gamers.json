@@ -1,0 +1,48 @@
+{
+  "name": "D. For Gamers. By Gamers.",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3 10\n3 4 6\n5 5 5\n10 3 4\n3\n8 3\n5 4\n10 15\n",
+      "output": "5 3 -1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "5 15\n14 10 3\n9 2 2\n10 4 3\n7 3 5\n4 3 1\n6\n11 2\n1 1\n4 7\n2 1\n1 14\n3 3\n",
+      "output": "14 4 14 4 7 7\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "5 13\n13 1 9\n6 4 5\n12 18 4\n9 13 2\n5 4 5\n2\n16 3\n6 2\n",
+      "output": "12 5\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.DForGamersByGamers",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.03.22",
+  "contestName": "Codeforces - Educational Codeforces Round 125 (Rated for Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

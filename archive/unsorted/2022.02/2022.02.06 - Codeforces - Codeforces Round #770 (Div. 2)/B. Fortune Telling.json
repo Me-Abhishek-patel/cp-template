@@ -1,0 +1,36 @@
+{
+  "name": "B. Fortune Telling",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "4\n1 7 9\n2\n2 0 2\n1 3\n4 0 1\n1 2 3 4\n2 1000000000 3000000000\n1000000000 1000000000\n",
+      "output": "Alice\nAlice\nBob\nAlice\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BFortuneTelling",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.02.06",
+  "contestName": "Codeforces - Codeforces Round #770 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

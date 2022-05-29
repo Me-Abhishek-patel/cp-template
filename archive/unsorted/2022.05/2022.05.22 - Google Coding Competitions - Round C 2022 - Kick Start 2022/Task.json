@@ -1,0 +1,36 @@
+{
+  "name": "Task",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3\n1 5\n1 1\n2 7\n4 1\n5 0\n4 10\n8 0\n2 1\n6 1\n4 0\n",
+      "output": "Case #1: 1\nCase #2: 2 1\nCase #3: 1 2 3 4\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Solution",
+  "taskClass": "codes.Task",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.05.22",
+  "contestName": "Google Coding Competitions - Round C 2022 - Kick Start 2022",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

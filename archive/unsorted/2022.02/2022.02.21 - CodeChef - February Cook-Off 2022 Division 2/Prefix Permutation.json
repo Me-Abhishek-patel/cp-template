@@ -1,0 +1,36 @@
+{
+  "name": "Prefix Permutation",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3\n8 4\n3 6 7 8\n7 1\n7\n5 5\n1 2 3 4 5\n",
+      "output": "2 3 1 6 4 5 7 8\n4 6 1 5 2 7 3\n1 2 3 4 5\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.PrefixPermutation",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.02.21",
+  "contestName": "CodeChef - February Cook-Off 2022 Division 2",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

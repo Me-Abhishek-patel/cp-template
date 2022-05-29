@@ -1,0 +1,36 @@
+{
+  "name": "B. Dorms War",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "10\n9\niloveslim\n1 s\n7\njoobeel\n2 o e\n7\nbasiozi\n2 s i\n6\nkhater\n1 r\n7\nabobeih\n6 a b e h i o\n5\nzondl\n5 a b c e f\n6\nshoman\n2 a h\n7\nshetwey\n2 h y\n5\nsamez\n1 m\n6\nmouraz\n1 m\n",
+      "output": "5\n2\n3\n5\n1\n0\n3\n5\n2\n0\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.BDormsWar",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.05.06",
+  "contestName": "Codeforces - Codeforces Round #788 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

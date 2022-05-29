@@ -764,5 +764,23 @@ public class ArrayUtils {
         return idx;
     }
 
+    public static int[] mergesort(int[] arr) {
+        Integer[] a = toIntegerArray(arr);
+        Arrays.sort(a);
+        return toIntArray(a);
+    }
+
+    public static long[] mergesort(long[] arr) {
+        Long[] a = new Long[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            a[i] = new Long(arr[i]);
+        }
+        Arrays.sort(a);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = a[i];
+        }
+        return arr;
+    }
+
 
 }

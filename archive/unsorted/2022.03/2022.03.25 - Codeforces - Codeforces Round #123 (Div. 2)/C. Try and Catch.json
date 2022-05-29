@@ -1,0 +1,60 @@
+{
+  "name": "C. Try and Catch",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "8\ntry\n    try\n        throw ( AE )\n    catch ( BE, \"BE in line 3\")\n\n    try\n    catch(AE, \"AE in line 5\")\ncatch(AE,\"AE somewhere\")\n",
+      "output": "AE somewhere\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "8\ntry\n    try\n        throw ( AE )\n    catch ( AE, \"AE in line 3\")\n\n    try\n    catch(BE, \"BE in line 5\")\ncatch(AE,\"AE somewhere\")\n",
+      "output": "AE in line 3\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "8\ntry\n    try\n        throw ( CE )\n    catch ( BE, \"BE in line 3\")\n\n    try\n    catch(AE, \"AE in line 5\")\ncatch(AE,\"AE somewhere\")\n",
+      "output": "Unhandled Exception\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "8\ntry\n    try\n        throw ( AE ) \n    catch ( BE, \"BE in line 3\")\n\n    try\n    catch(AE, \"AE in line 5\") \ncatch(AE,\"AE somewhere\")",
+      "output": "AE somewhere",
+      "index": 3,
+      "active": true
+    },
+    {
+      "input": "3\ntry\nthrow ( X )\ncatch ( X, \"try again\")\n",
+      "output": "",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CTryAndCatch",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.03.25",
+  "contestName": "Codeforces - Codeforces Round #123 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

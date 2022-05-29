@@ -1,0 +1,54 @@
+{
+  "name": "C. To Add or Not to Add",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "5 3\n6 3 4 0 2\n",
+      "output": "3 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3 4\n5 5 5\n",
+      "output": "3 5\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "5 3\n3 1 2 2 1\n",
+      "output": "4 2\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "6 0\n3 2 3 2 3 2",
+      "output": "3 2",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CToAddOrNotToAdd",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.04.10",
+  "contestName": "Codeforces - Codeforces Round #143 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

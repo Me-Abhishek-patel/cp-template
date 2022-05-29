@@ -1,0 +1,36 @@
+{
+  "name": "3D Printing",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3\n300000 200000 300000 500000\n300000 200000 500000 300000\n300000 500000 300000 200000\n1000000 1000000 0 0\n0 1000000 1000000 1000000\n999999 999999 999999 999999\n768763 148041 178147 984173\n699508 515362 534729 714381\n949704 625054 946212 951187\n",
+      "output": "Case #1: 300000 200000 300000 200000\nCase #2: IMPOSSIBLE\nCase #3: 400001 100002 100003 399994\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Solution",
+  "taskClass": "codes.DPrinting",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.04.02",
+  "contestName": "Google Coding Competitions - Qualification Round 2022 - Code Jam 2022",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

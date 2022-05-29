@@ -1,0 +1,36 @@
+{
+  "name": "A. Minimums and Maximums",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "7\n3 5 4 6\n5 8 5 5\n3 3 10 12\n1 5 3 3\n1 1 2 2\n2 2 1 1\n6 6 6 6\n",
+      "output": "4\n5\n13\n3\n3\n3\n6\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx512M",
+  "mainClass": "Main",
+  "taskClass": "codes.AMinimumsAndMaximums",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.05.13",
+  "contestName": "Codeforces - Educational Codeforces Round 128 (Rated for Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

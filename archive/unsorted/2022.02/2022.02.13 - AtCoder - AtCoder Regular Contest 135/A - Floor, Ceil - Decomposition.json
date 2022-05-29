@@ -1,0 +1,48 @@
+{
+  "name": "A - Floor, Ceil - Decomposition",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "15\n",
+      "output": "192\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3\n",
+      "output": "3\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "100\n",
+      "output": "824552442\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Main",
+  "taskClass": "codes.AFloorCeilDecomposition",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.02.13",
+  "contestName": "AtCoder - AtCoder Regular Contest 135",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

@@ -5,8 +5,8 @@ package net.cplibrary.collections;
  * Linkedin : ( https://www.linkedin.com/in/abhishek-p-6733b3195/ )
  */
 public class Pair<U, V> implements Comparable<Pair<U, V>> {
-    public final U first;
-    public final V second;
+    public U first;
+    public V second;
 
     public Pair(U first, V second) {
         this.first = first;

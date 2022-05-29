@@ -22,6 +22,7 @@ public class Angle {
         double y2 = b.y - o.y;
         double scal = x1 * x2 + y1 * y2;
         double vect = x1 * y2 - x2 * y1;
-        return Math.abs(Math.atan2(vect, scal));
+//        return Math.abs(Math.acos(vect/scal));
+        return (Math.atan2(vect, scal));
     }
 }

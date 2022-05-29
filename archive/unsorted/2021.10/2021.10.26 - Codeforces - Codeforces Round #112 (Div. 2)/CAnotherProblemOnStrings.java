@@ -4,6 +4,8 @@ import net.cplibrary.io.InputReader;
 import net.cplibrary.io.OutputWriter;
 import net.cplibrary.misc.ArrayUtils;
 
+import static net.cplibrary.numbers.IntegerUtils.isPrime;
+
 public class CAnotherProblemOnStrings {
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         int k = in.readInt();

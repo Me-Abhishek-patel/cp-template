@@ -1,0 +1,48 @@
+{
+  "name": "Permutation XOR Sum",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "5\n1\n2\n3\n4\n29012022\n",
+      "output": "0\n6\n6\n20\n841697449540506\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "1\n29012022",
+      "output": "841697449540506",
+      "index": 1,
+      "active": false
+    },
+    {
+      "input": "1\n39\n",
+      "output": "",
+      "index": 2,
+      "active": false
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.PermutationXORSum",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.29",
+  "contestName": "CodeChef - January Lunchtime 2022 Division 2",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

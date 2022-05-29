@@ -1,0 +1,48 @@
+{
+  "name": "C - kasaka",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "kasaka\n",
+      "output": "Yes\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "atcoder\n",
+      "output": "No\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "php\n",
+      "output": "Yes\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx1024M",
+  "mainClass": "Main",
+  "taskClass": "codes.CKasaka",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.01.30",
+  "contestName": "AtCoder - AtCoder Beginner Contest 237",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

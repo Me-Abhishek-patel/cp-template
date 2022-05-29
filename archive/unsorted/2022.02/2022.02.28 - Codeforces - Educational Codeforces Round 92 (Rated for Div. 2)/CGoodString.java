@@ -1,0 +1,51 @@
+package codes;
+
+import static java.lang.Math.*;
+import static java.lang.String.*;
+import static net.cplibrary.numbers.IntegerUtils.MAX_VALUE;
+import static net.cplibrary.numbers.IntegerUtils.MIN_VALUE;
+import static net.cplibrary.misc.ArrayUtils.*;
+import static net.cplibrary.numbers.IntegerUtils.*;
+import static net.cplibrary.string.StringUtils.*;
+import static net.cplibrary.misc.MiscUtils.*;
+import static net.cplibrary.collections.CollectionUtils.*;
+
+import net.cplibrary.io.InputReader;
+import net.cplibrary.io.OutputWriter;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class CGoodString {
+    public void solve(int testNumber, InputReader in, OutputWriter out) {
+        String s = in.readLine();
+        HashSet<String> hs = new HashSet<>();
+        for (int i = 0; i < s.length() - 1; i++) {
+            for (int j = i + 1; j < s.length(); j++) {
+                hs.add(""+s.charAt(i) + ""+s.charAt(j) );
+            }
+        }
+        int min = Integer.MAX_VALUE;
+
+        for (String h : hs) {
+//            out.printLine(h);
+            int j = 0;
+            int count = 0;
+            for (int i = 0; i < s.length(); i++) {
+                if (j == 2) j = 0;
+                if (s.charAt(i) == h.charAt(j)) {
+                    j++;
+                } else {
+                    count++;
+                }
+            }
+            if (j != 2) count += j;
+
+            min = min(min, count);
+        }
+        out.printLine(min);
+
+    }
+
+
+}

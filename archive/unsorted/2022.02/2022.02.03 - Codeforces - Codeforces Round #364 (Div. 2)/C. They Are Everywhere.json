@@ -1,0 +1,90 @@
+{
+  "name": "C. They Are Everywhere",
+  "testType": "SINGLE",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "3\nAaA\n",
+      "output": "2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "7\nbcAAcbc\n",
+      "output": "3\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "6\naaBCCe\n",
+      "output": "5\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "20\nVEVnVVnWnVEVVnEVBEWn",
+      "output": "5",
+      "index": 3,
+      "active": true
+    },
+    {
+      "input": "25\ncpcyPPjPPcPPPPcppPcPpppcP",
+      "output": "6",
+      "index": 4,
+      "active": true
+    },
+    {
+      "input": "35\ngdXdddgddddddddggggXdbgdggdgddddddb",
+      "output": "4",
+      "index": 5,
+      "active": true
+    },
+    {
+      "input": "7\nabcbbab",
+      "output": "3",
+      "index": 6,
+      "active": true
+    },
+    {
+      "input": "9\nbcdddbddc",
+      "output": "3",
+      "index": 7,
+      "active": true
+    },
+    {
+      "input": "71\nlqcrdopdpfagcilpcmheqhjbmnciqmeoabflrenbkrsaabaanpehdmpqcdqnljcrsplnlco",
+      "output": "36",
+      "index": 8,
+      "active": true
+    },
+    {
+      "input": "8\nabbbbbbc",
+      "output": "8",
+      "index": 9,
+      "active": true
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.CTheyAreEverywhere",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.02.03",
+  "contestName": "Codeforces - Codeforces Round #364 (Div. 2)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}

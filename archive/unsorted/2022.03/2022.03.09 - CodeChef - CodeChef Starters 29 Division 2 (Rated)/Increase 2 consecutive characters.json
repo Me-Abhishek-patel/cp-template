@@ -1,0 +1,54 @@
+{
+  "name": "Increase 2 consecutive characters",
+  "testType": "MULTI_NUMBER",
+  "input": {
+    "type": "STANDARD",
+    "fileName": "input.txt"
+  },
+  "output": {
+    "type": "STANDARD",
+    "fileName": "output.txt"
+  },
+  "tests": [
+    {
+      "input": "1\n5 3\nabcdz\nnbhea\n2 2\n1 3\n4 5\n",
+      "output": "Yes\nNo\nYes\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3\n6 3\nacigab\nbgrmbc\n1 4\n5 6\n2 4\n3 3\nabc\nbdd\n1 3\n1 2\n2 3\n5 5\naaabb\naaabb\n1 1\n2 2\n1 5\n5 5\n4 5\n",
+      "output": "",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "",
+      "output": "",
+      "index": 2,
+      "active": false
+    },
+    {
+      "input": "",
+      "output": "",
+      "index": 3,
+      "active": false
+    }
+  ],
+  "location": "src/codes",
+  "vmArgs": "-Xmx256M",
+  "mainClass": "Main",
+  "taskClass": "codes.Increase2ConsecutiveCharacters",
+  "checkerClass": "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters": "",
+  "testClasses": [],
+  "date": "2022.03.09",
+  "contestName": "CodeChef - CodeChef Starters 29 Division 2 (Rated)",
+  "truncate": true,
+  "inputClass": "net.cplibrary.io.InputReader",
+  "outputClass": "net.cplibrary.io.OutputWriter",
+  "includeLocale": false,
+  "failOnOverflow": false,
+  "interactive": false,
+  "interactor": "net.egork.chelper.tester.Interactor"
+}
